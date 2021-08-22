@@ -1,5 +1,12 @@
+interface RepositoryProps {
+  repository: {
+    name: string;
+    description: string;
+    html_url: string;
+  }
+}
 
-export function RepositoryItem(props) {
+export function RepositoryItem(props: RepositoryProps) {
   return(
     <li>
       <strong>{props.repository.name ?? 'Default'}</strong>
